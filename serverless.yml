@@ -2,8 +2,6 @@ service: CountryService
 frameworkVersion: '3'
 
 plugins:
-  - serverless-ruby-layer
-  - serverless-iam-roles-per-function
   - serverless-prune-plugin
   - serverless-offline
 

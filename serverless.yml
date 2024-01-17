@@ -1,0 +1,25 @@
+service: saveToDDBService
+frameworkVersion: '3'
+
+plugins:
+  - serverless-ruby-layer
+  - serverless-iam-roles-per-function
+  - serverless-prune-plugin
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: ruby2.7
+  stage: prod
+  region: ap-south-1
+  environment:
+    countries_api_domain: restcountries.com
+    countries_api_version: 3.1
+
+custom:
+  prune:
+    automatic: true
+    number: 3
+
+functions:
+  - ${file(lambda.yml)}

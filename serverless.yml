@@ -1,4 +1,4 @@
-service: saveToDDBService
+service: CountryService
 frameworkVersion: '3'
 
 plugins:
@@ -9,7 +9,7 @@ plugins:
 
 provider:
   name: aws
-  runtime: ruby2.7
+  runtime: ruby3.2
   stage: prod
   region: ap-south-1
   environment:

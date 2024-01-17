@@ -1,4 +1,4 @@
-weather_service:
+country_service:
     handler: handler.my_service
     memorySize: 128
     timeout: 30
